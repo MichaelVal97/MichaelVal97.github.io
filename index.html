@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+   
+
+</head>
+
+<body>
+  <br />
+  <style>
+   body {
+    background: linear-gradient(to bottom, #ffc800, #ff831e); 
+    background-size: 100% 200%; 
+    transition: background-position 15s ease; 
+}
+
+
+body:hover {
+    background-position: 0 100%; 
+}
+#persona h3 {
+    color: rgb(255, 255, 255); 
+}
+#usuario {
+    border: 5px solid #000000; 
+    background-color: #f2f2f2; 
+    padding: 15px; 
+    border-radius: 50px; 
+    font-size: 16px; 
+}
+.header h1 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  animation: textAnimation 6s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes textAnimation {
+  0%, 100% {
+    transform: translate(100px, 100px);
+  }
+  25% {
+    transform: translate(100px, 0);
+  }
+  50% {
+    transform: translate(0, 100px);
+  }
+  75% {
+    transform: translate(-100px, 0);
+  }
+}
+
+
+
+
+    @keyframes desplazamiento {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
+}
+
+h2 {
+  animation: desplazamiento 20s linear infinite; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+   
+input[type="radio"] {
+  text-align: center;
+    margin: 0 auto;
+}
+h5 {
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+
+label {
+    max-width: 600px; 
+    display: block;
+    margin: 0 auto; 
+}
+#boton-enviar {
+    background-color: green;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#boton-enviar:hover {
+    background-color: darkgreen;
+    transform: scale(1.1); 
+}
+
+.image-container {
+  position: relative; 
+  display: inline-block; 
+}
+
+
+.image-container img {
+  animation: moveUpDown 3s ease infinite; 
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(20px); }
+}
+</style>
+  <header class="header">
+    <CENTER><h1>CUESTIONARIO</h1></CENTER>
+    <center><h2>Analisis y diseño de sistemas</h2></center>
+    <br><br>
+  </header>
+  <main>
+    <!-- Datos personales de una persona -->
+
+    <center><div id="persona">
+      <br/>
+        <h3>Ingresa:</h3>
+        <input type="text" id="usuario" placeholder="NOMBRES Y APELLIDOS"> <br><br>
+        <div class="image-container"><img src="https://i0.wp.com/itp.edu.co/ITP2022/wp-content/uploads/2023/01/26.-ITP-1.png?fit=608%2C268&ssl=1" alt="Descripción de la imagen">
+        </div>
+        </div></center>
+    <br/><br/><br/><br/>
+    <!-- CUESTIONARIO -->
+
+                                            <!-- funcion de verificacion de respuestas -->
+    <form name="preguntas" id="preguntas" onsubmit="verificar_respuestas()">
+        <!--pregunta-->
+
+        <h5>1.Según su función en el ámbito de la informática y la tecnología de la información, ¿qué define principalmente a un analista de sistemas?</h5>
+         <!--  (type="radio" es para hacer la seleccion de cuestionario)  (name="" es como funcion de id)-->       
+        <input type="radio" name="p1" value="a">A: Un profesional encargado de la gestión de recursos humanos en una organización.<br/>
+        <input type="radio" name="p1" value="b">B: Un individuo especializado en el diseño y la confección de prendas de vestir.<br/>
+        <input type="radio" name="p1" value="c">C: Un experto en el análisis, diseño y desarrollo de soluciones tecnológicas en una organización.<br/>
+        <input type="radio" name="p1" value="d">D: Un trabajador responsable de la supervisión de instalaciones eléctricas en edificios.<br/>
+        <br/>
+        <!--pregunta--> 
+
+        <h5>2.Dentro de las habilidades necesarias para desempeñarse como analista de sistemas, ¿cuál de las siguientes opciones es fundamental?</h5> 
+        <input type="radio" name="p2" value="a">A: Habilidad para realizar tareas de contabilidad y finanzas.<br/>
+        <input type="radio" name="p2" value="b">B: Habilidad para tocar instrumentos musicales de forma profesional.<br/>
+        <input type="radio" name="p2" value="c">C: Habilidad para diseñar edificios y estructuras arquitectónicas.<br/>
+        <input type="radio" name="p2" value="d">D: Habilidad para programar y resolver problemas tecnológicos de manera efectiva.<br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>3.Dentro del rol de un analista de sistemas, ¿por qué es crucial comprender las necesidades del cliente?</h5>
+        <input type="radio" name="p3" value="a">A: Para influir en la toma de decisiones financieras de la empresa.<br/>
+        <input type="radio" name="p3" value="b">B: Para redactar informes de ventas y marketing.<br/>
+        <input type="radio" name="p3" value="c">C: Para diseñar estrategias de recursos humanos.<br/>
+        <input type="radio" name="p3" value="d">D: Para desarrollar soluciones tecnológicas que satisfagan los requerimientos y objetivos del cliente.<br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>4.¿Cuál de las siguientes opciones describe de manera más precisa el proceso típico que sigue un analista de sistemas para desarrollar soluciones tecnológicas?</h5>
+        <input type="radio" name="p4" value="a">A: Coordinar eventos y conferencias para promover productos. <br/>
+        <input type="radio" name="p4" value="b">B: Diseñar estrategias de conservación ambiental en empresas. <br/>
+        <input type="radio" name="p4" value="c">C: Gestionar la nómina y los salarios de los empleados de una organización. <br/>
+        <input type="radio" name="p4" value="d">D: Realizar análisis, diseño, implementación y pruebas de soluciones informáticas según las necesidades del cliente. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>5.Dentro del análisis de sistemas, ¿cuál de las siguientes definiciones corresponde al concepto de "diagrama de flujo"?</h5>
+        <input type="radio" name="p5" value="a">A: Un esquema gráfico que representa la estructura interna de un organismo. <br/>
+        <input type="radio" name="p5" value="b">B: Un mapa que muestra la ubicación de recursos naturales en una región. <br/>
+        <input type="radio" name="p5" value="c">C: Una representación visual de la secuencia de pasos en un proceso o algoritmo. <br/>
+        <input type="radio" name="p5" value="d">D: Una ilustración de la disposición de muebles en un espacio arquitectónico. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>6.Dentro del proceso de análisis de sistemas, ¿cuál es el propósito principal de llevar a cabo entrevistas con los usuarios?</h5>
+        <input type="radio" name="p6" value="a">A: Evaluar el desempeño financiero de la organización. <br/>
+        <input type="radio" name="p6" value="b">B: Planificar eventos y actividades de team-building. <br/>
+        <input type="radio" name="p6" value="c">C: Diseñar estrategias de marketing para nuevos productos. <br/>
+        <input type="radio" name="p6" value="d">D: Comprender las necesidades y requerimientos de los usuarios para desarrollar soluciones tecnológicas adecuadas. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>7.Dentro del análisis de sistemas, ¿cómo se definen los casos de uso y cuál es su función principal?</h5>
+        <input type="radio" name="p7" value="a">A: Son eventos sociales organizados por empresas para promocionar sus productos. <br/>
+        <input type="radio" name="p7" value="b">B: Son herramientas de cálculo utilizadas para la contabilidad financiera. <br/>
+        <input type="radio" name="p7" value="c">C: Son documentos legales que establecen los términos de un contrato laboral. <br/>
+        <input type="radio" name="p7" value="d">D: Son descripciones de interacciones entre usuarios y sistemas que ayudan a comprender los requisitos y funcionalidades de un sistema informático. <br/>
+        <br/>
+        <!--pregunta-->
+        
+        <h5>8.Dentro del proceso de análisis de sistemas, ¿cuál es la razón fundamental por la que es importante documentar los requisitos?</h5>
+        <input type="radio" name="p8" value="a">A: Para crear informes de ventas y marketing. <br/>
+        <input type="radio" name="p8" value="b">B: Para diseñar estrategias de expansión internacional. <br/>
+        <input type="radio" name="p8" value="c">C: Para gestionar la nómina y los salarios de los empleados. <br/>
+        <input type="radio" name="p8" value="d">D: Para garantizar una comprensión clara y precisa de las necesidades y expectativas de los usuarios y clientes. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>9.Dentro del ámbito de análisis de sistemas, ¿cuál es la distinción principal entre los requisitos funcionales y los requisitos no funcionales?</h5>
+        <input type="radio" name="p9" value="a">A: Los requisitos funcionales se refieren a las metas financieras de un proyecto, mientras que los requisitos no funcionales se centran en los objetivos de marketing <br/>
+        <input type="radio" name="p9" value="b">B: Los requisitos funcionales describen la apariencia visual de un sistema, mientras que los requisitos no funcionales abordan su usabilidad.<br/>
+        <input type="radio" name="p9" value="c">C: Los requisitos funcionales se centran en las características y acciones específicas de un sistema, mientras que los requisitos no funcionales abordan aspectos como el rendimiento, la seguridad y la escalabilidad.<br/>
+        <input type="radio" name="p9" value="d">D: Los requisitos funcionales son aquellos relacionados con la gestión de recursos humanos, mientras que los requisitos no funcionales se relacionan con la administración de la cadena de suministro.<br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>10.Dentro del análisis de sistemas, ¿qué se entiende por ingeniería inversa y cómo se relaciona con este proceso?</h5>
+        <input type="radio" name="p10" value="a">A: La ingeniería inversa se refiere al proceso de diseñar soluciones tecnológicas desde cero, sin utilizar tecnologías previas.<br/>
+        <input type="radio" name="p10" value="b">B: La ingeniería inversa es la técnica de desmontar productos para vender sus piezas por separado.<br/>
+        <input type="radio" name="p10" value="c">C: La ingeniería inversa consiste en analizar y comprender sistemas existentes para obtener información sobre su funcionamiento y diseño original.<br/>
+        <input type="radio" name="p10" value="d">D: La ingeniería inversa es la práctica de reducir la complejidad de sistemas tecnológicos mediante la eliminación de características innecesarias.<br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>11.Dentro del proceso de análisis de sistemas, ¿cuál es el papel fundamental de un prototipo?</h5>
+        <input type="radio" name="p11" value="a">A: Un prototipo es un modelo físico de un edificio o estructura arquitectónica.<br/>
+        <input type="radio" name="p11" value="b">B: Un prototipo es un conjunto de documentos legales que establecen los términos de un contrato laboral. <br/>
+        <input type="radio" name="p11" value="c">C: Un prototipo es un esquema financiero que detalla los ingresos y gastos de una organización.<br/>
+        <input type="radio" name="p11" value="d">D: Un prototipo es una representación temprana y simplificada de un sistema o software que permite a los usuarios y desarrolladores visualizar y probar conceptos, características y funcionalidades.<br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>12.Dentro del ámbito del análisis de sistemas, ¿qué se entiende por planificación de proyectos y por qué es esencial para un analista de sistemas?</h5>
+        <input type="radio" name="p12" value="a">A: La planificación de proyectos se refiere a la decoración y ambientación de espacios de trabajo.<br/>
+        <input type="radio" name="p12" value="b">B: La planificación de proyectos es la creación de estrategias de marketing para promocionar nuevos producto.<br/>
+        <input type="radio" name="p12" value="c">C: La planificación de proyectos es la gestión de recursos humanos en una organización.<br/>
+        <input type="radio" name="p12" value="d">D: La planificación de proyectos implica definir objetivos, estimar recursos, establecer cronogramas y tareas, y asignar responsabilidades para lograr una implementación exitosa. Es esencial para un analista de sistemas porque ayuda a organizar y controlar el proceso de desarrollo de soluciones tecnológicas, garantizando la entrega oportuna y eficiente de sistemas que cumplan con los requisitos del cliente y las expectativas de calidad.<br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>13.Dentro del ámbito de análisis de sistemas, ¿por qué es crucial la comunicación efectiva para un analista de sistemas?</h5>
+        <input type="radio" name="p13" value="a">A: Para dirigir las operaciones diarias de una organización. <br/>
+        <input type="radio" name="p13" value="b">B: Para diseñar estrategias de promoción y publicidad. <br/>
+        <input type="radio" name="p13" value="c">C: Para supervisar la cadena de suministro de una empresa. <br/>
+        <input type="radio" name="p13" value="d">D: Porque permite comprender las necesidades de los usuarios, transmitir información técnica de manera clara y colaborar con equipos de desarrollo, garantizando el diseño y la implementación exitosa de soluciones tecnológicas que satisfagan las demandas de los clientes. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>14.Dentro del análisis de sistemas, ¿cuál es la forma principal en la que un analista asegura que una solución cumpla con los requisitos del cliente?</h5>
+        <input type="radio" name="p14" value="a">A: Realizando pruebas de sostenibilidad ambiental en el producto final. <br/>
+        <input type="radio" name="p14" value="b">B: Desarrollando estrategias de marketing para promocionar la solución. <br/>
+        <input type="radio" name="p14" value="c">C: Contratando más personal para agilizar el proceso de desarrollo. <br/>
+        <input type="radio" name="p14" value="d">D: Implementando pruebas rigurosas y validaciones continuas para verificar que la solución se ajuste a los requisitos y expectativas del cliente. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>15.Dentro del análisis de sistemas, ¿cómo se define el concepto de "alcance del proyecto"? </h5>
+        <input type="radio" name="p15" value="a">A: El alcance del proyecto se refiere a la ubicación geográfica de las oficinas de la empresa <br/>
+        <input type="radio" name="p15" value="b">B: El alcance del proyecto hace referencia a los recursos financieros asignados para el desarrollo de un sistema. <br/>
+        <input type="radio" name="p15" value="c">C: El alcance del proyecto es la cantidad de empleados involucrados en el proceso de análisis de sistemas. <br/>
+        <input type="radio" name="p15" value="d">D: El alcance del proyecto define los límites y las fronteras de lo que se incluirá y no se incluirá en el sistema o solución que se va a desarrollar, incluyendo las funcionalidades, características y objetivos específicos. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>16.Dentro del proceso de desarrollo de sistemas, ¿cuál es el papel fundamental de la prueba de aceptación del usuario? </h5>
+        <input type="radio" name="p16" value="a">A: Verificar la disponibilidad de recursos financieros para la implementación del sistema. <br/>
+        <input type="radio" name="p16" value="b">B: Definir la estructura organizativa de la empresa para el uso del nuevo sistema. <br/>
+        <input type="radio" name="p16" value="c">C: Planificar estrategias de marketing para promocionar el sistema entre los empleados. <br/>
+        <input type="radio" name="p16" value="d">D: Evaluar si el sistema cumple con los requisitos del usuario y si está listo para su implementación, permitiendo a los usuarios probar y validar el sistema en condiciones reales antes de su lanzamiento. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>17.Dentro del análisis y diseño de sistemas, ¿por qué se considera crucial la seguridad? </h5>
+        <input type="radio" name="p17" value="a">A: Para garantizar la eficiencia operativa de los empleados en la organización. <br/>
+        <input type="radio" name="p17" value="b">B: Para diseñar estrategias de marketing que impulsen la promoción de productos. <br/>
+        <input type="radio" name="p17" value="c">C: Para supervisar el rendimiento financiero de la empresa y tomar decisiones. <br/>
+        <input type="radio" name="p17" value="d">D: Porque la seguridad asegura la protección de datos confidenciales, previene amenazas cibernéticas y salvaguarda la integridad de la información en los sistemas, garantizando la confianza de los usuarios y la continuidad de las operaciones. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>18.En el contexto del papel tradicional del analista de sistemas, ¿cuál es el impacto más relevante de la tecnología emergente? </h5>
+        <input type="radio" name="p18" value="a">A: Facilitar la creación de estrategias de marketing para promocionar productos. <br/>
+        <input type="radio" name="p18" value="b">B: Agilizar los procesos de contabilidad y auditoría en una organización. <br/>
+        <input type="radio" name="p18" value="c">C: Reducir la necesidad de colaboración con otros profesionales en el campo de la informática. <br/>
+        <input type="radio" name="p18" value="d">D: Modificar las habilidades requeridas, exigiendo al analista de sistemas mantenerse actualizado y adaptarse a las nuevas tecnologías para seguir siendo eficiente en la creación, mantenimiento y mejora de soluciones tecnológicas. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>19.Dentro del ámbito del análisis de sistemas, ¿cómo puede un analista asegurar que una solución sea escalable y adaptable en el futuro? </h5>
+        <input type="radio" name="p19" value="a">A: Contratando a más desarrolladores para ampliar el equipo de trabajo. <br/>
+        <input type="radio" name="p19" value="b">B: Implementando estrategias de publicidad para aumentar la adopción del sistema. <br/>
+        <input type="radio" name="p19" value="c">C: Asegurándose de que el sistema tenga una interfaz de usuario amigable. <br/>
+        <input type="radio" name="p19" value="d">D: Diseñando la arquitectura del sistema de manera modular y siguiendo estándares tecnológicos, de modo que los componentes puedan ser modificados o ampliados fácilmente en el futuro. <br/>
+        <br/>
+        <!--pregunta-->
+
+        <h5>20.Dentro del rol del analista de sistemas, ¿cuál es la relación fundamental entre el ciclo de vida del desarrollo de sistemas y su labor? </h5>
+        <input type="radio" name="p20" value="a">A: El ciclo de vida del desarrollo de sistemas es un modelo matemático utilizado por los analistas para predecir el rendimiento de los sistemas. <br/>
+        <input type="radio" name="p20" value="b">B: El ciclo de vida del desarrollo de sistemas define los roles y responsabilidades del analista en la organización. <br/>
+        <input type="radio" name="p20" value="c">C: El ciclo de vida del desarrollo de sistemas es un enfoque estratégico que los analistas emplean para mejorar la seguridad informática en una empresa. <br/>
+        <input type="radio" name="p20" value="d">D: El ciclo de vida del desarrollo de sistemas guía al analista en la planificación, el diseño, la implementación y el mantenimiento de soluciones tecnológicas, asegurando un enfoque estructurado y eficiente en todo el proceso. <br/>
+        <br/><br/>
+        <!-- boton de enviar las preguntas a validación-->
+        <center><input type="button" id="boton-enviar" onclick="verificar_respuestas()" value="enviar"></center>
+    </form>
+  </main>
+  <div><h1 id="resultado"></h1></div>
+  
+    <script src="cuestionario.js"></script>
+</body>
+
+</html>
+
+<!-- trabajo realizado por -->
+<!-- OSCAR DAVID RUIZ SAEZ -->
+<!-- MICHAEL STIVEN CERON VALENCIA -->
+<!-- JOHAN MALUA -->
